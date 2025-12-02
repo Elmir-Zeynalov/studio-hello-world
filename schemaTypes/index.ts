@@ -1,3 +1,5 @@
-import {postType} from './postType'
+import { plantType } from './plant'
+import { plantCareGuideType } from './plantCareGuide'
 
-export const schemaTypes = [postType]
+export const schemaTypes = [plantType, plantCareGuideType]
+
