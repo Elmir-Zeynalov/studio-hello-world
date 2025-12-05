@@ -32,10 +32,10 @@ export const plantType = defineType({
     }),
     defineField({
       name: 'fact',
-      title: 'Fact',
-      type: 'array',
-      of: [{type: 'block'}], // full rich text
+      title: 'Plant Facts',
+      type: 'blockContent',
     }),
+
     defineField({
       name: 'careGuide',
       title: 'Care Guide',
