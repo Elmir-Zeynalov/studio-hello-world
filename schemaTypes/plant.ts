@@ -1,4 +1,4 @@
-import { defineType, defineField } from 'sanity'
+import {defineType, defineField} from 'sanity'
 
 export const plantType = defineType({
   name: 'plant',
@@ -8,23 +8,39 @@ export const plantType = defineType({
     defineField({
       name: 'name',
       title: 'Name',
-      type: 'string'
+      type: 'string',
+    }),
+    defineField({
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      options: {
+        source: 'name',
+        maxLength: 96,
+      },
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'image',
       title: 'Image',
-      type: 'image'
+      type: 'image',
     }),
     defineField({
       name: 'description',
       title: 'Description',
-      type: 'text'
+      type: 'text',
+    }),
+    defineField({
+      name: 'fact',
+      title: 'Fact',
+      type: 'array',
+      of: [{type: 'block'}], // full rich text
     }),
     defineField({
       name: 'careGuide',
       title: 'Care Guide',
       type: 'reference',
-      to: [{ type: 'plantCareGuide' }]
-    })
-  ]
+      to: [{type: 'plantCareGuide'}],
+    }),
+  ],
 })
