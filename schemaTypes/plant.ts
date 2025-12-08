@@ -42,5 +42,12 @@ export const plantType = defineType({
       type: 'reference',
       to: [{type: 'plantCareGuide'}],
     }),
+
+    defineField({
+      name: 'personality',
+      title: 'Plant Horoscope',
+      type: 'reference',
+      to: [{type: 'plantAura'}],
+    }),
   ],
 })

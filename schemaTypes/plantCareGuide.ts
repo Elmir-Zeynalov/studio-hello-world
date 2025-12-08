@@ -1,4 +1,4 @@
-import { defineType, defineField } from 'sanity'
+import {defineType, defineField} from 'sanity'
 
 export const plantCareGuideType = defineType({
   name: 'plantCareGuide',
@@ -8,38 +8,38 @@ export const plantCareGuideType = defineType({
     defineField({
       name: 'title',
       title: 'Title',
-      type: 'string'
+      type: 'string',
     }),
     defineField({
       name: 'wateringInstructions',
       title: 'Watering Instructions',
-      type: 'text'
+      type: 'text',
     }),
     defineField({
       name: 'lightRequirements',
       title: 'Light Requirements',
       type: 'string',
       options: {
-        list: ['low', 'medium', 'high']
-      }
+        list: ['low', 'medium', 'high'],
+      },
     }),
     defineField({
       name: 'soilType',
       title: 'Soil Type',
-      type: 'string'
+      type: 'string',
     }),
     defineField({
       name: 'fertilizer',
       title: 'Fertilizer',
-      type: 'string'
+      type: 'string',
     }),
     defineField({
       name: 'difficulty',
       title: 'Difficulty',
       type: 'string',
       options: {
-        list: ['easy', 'medium', 'hard']
-      }
-    })
-  ]
+        list: ['easy', 'medium', 'hard'],
+      },
+    }),
+  ],
 })
